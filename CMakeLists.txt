@@ -27,6 +27,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         signup.h signup.cpp signup.ui
         animation_level.h animation_level.cpp animation_level.ui
         game01.h game01.cpp game01.ui
+        mainpage.h mainpage.cpp mainpage.ui
+        image.qrc
+        square.h square.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET springHomework APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -7,10 +7,9 @@ animation_level::animation_level(QWidget *parent)
     , ui(new Ui::animation_level)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(300,300,1080,600));
+    this->setGeometry(QRect(400,250,1080,600));
     setWindowTitle("GEOMETRY GAME");
     timeCounter = 1;
-    ui->groupBox->close();
 }
 
 animation_level::~animation_level()
@@ -25,8 +24,6 @@ void animation_level::paintEvent(QPaintEvent* event){
     painter.setPen(Qt::black);
     painter.setBrush(QColorConstants::Svg::blanchedalmond);
     painter.drawRect(rect1);
-
-
 }
 
 void animation_level::on_pushButton_clicked()
@@ -78,22 +75,15 @@ void animation_level::closeLable(){
         timelength++;
     }
     else if(timelength == 81){
-        ui->groupBox->show();
+        timelength++;
+        mp = new mainpage;
+        mp->show();
+        this->close();
+        delete timer1;
     }
-    else{
-        timer1->stop();
-        return;
-    }
-}
-
-void animation_level::on_pushButton_8_clicked()
-{
-    this->close();
 }
 
 
-void animation_level::on_pushButton_2_clicked()
-{
-    game01page->show();
-}
+
+
 

@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/sun-2081062_1920.png</file>
+        <file>img/starKing-5943148.png</file>
+        <file>img/music-1956799_1280(1).png</file>
+        <file>img/music-1956799_1280(2).png</file>
+        <file>img/starKing-movedown.png</file>
+        <file>img/starKing-moveleft.png</file>
+        <file>img/starKing-moveright.png</file>
+        <file>img/attack.png</file>
+        <file>img/attack2.png</file>
+    </qresource>
+</RCC>

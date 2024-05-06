@@ -5,7 +5,7 @@
 #include <QPainter>
 #include <QTimer>
 #include <qstring.h>
-#include "game01.h"
+#include "mainpage.h"
 
 namespace Ui {
 class animation_level;
@@ -25,19 +25,15 @@ public slots:
 
 private slots:
     void on_pushButton_clicked();
-    //void clickTimes();
 
-    void on_pushButton_8_clicked();
 
-    void on_pushButton_2_clicked();
 
 private:
     Ui::animation_level *ui;
+    mainpage* mp = new mainpage;
     QTimer *timer1;
-    QTimer *timer2;
     int timeCounter;
     QRect rect1;
-    game01 *game01page = new game01;
 };
 
 #endif // ANIMATION_LEVEL_H
