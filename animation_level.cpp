@@ -9,6 +9,7 @@ animation_level::animation_level(QWidget *parent)
     ui->setupUi(this);
     this->setGeometry(QRect(400,250,1080,600));
     setWindowTitle("GEOMETRY GAME");
+    background = QPixmap(":/img/background2.png");
     timeCounter = 1;
 }
 
@@ -20,10 +21,7 @@ animation_level::~animation_level()
 void animation_level::paintEvent(QPaintEvent* event){
     QPainter painter(this);
     //背景
-    QRect rect1(15,15,1050,570);
-    painter.setPen(Qt::black);
-    painter.setBrush(QColorConstants::Svg::blanchedalmond);
-    painter.drawRect(rect1);
+    painter.drawPixmap(0,0,1080,600,background);
 }
 
 void animation_level::on_pushButton_clicked()
@@ -42,7 +40,7 @@ void animation_level::on_pushButton_clicked()
         timeCounter++;
         break;
     case 3:
-        textNormal = "却都想" + QString('\n') + "夺走王国的太阳";
+        textNormal = "却都想" + QString('\n') + "毁灭王国的太阳";
         ui->label->setText(textNormal);
         timeCounter++;
         break;
@@ -79,7 +77,6 @@ void animation_level::closeLable(){
         mp = new mainpage;
         mp->show();
         this->close();
-        delete timer1;
     }
 }
 

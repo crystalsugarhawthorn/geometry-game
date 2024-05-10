@@ -8,6 +8,7 @@ signup::signup(QWidget *parent)
     ui->setupUi(this);
     this->setGeometry(QRect(200,200,1280,800));
     setWindowTitle("GEOMETRY GAME");
+    background = QPixmap(":/img/background2.png");
 }
 
 signup::~signup()
@@ -19,9 +20,7 @@ void signup::paintEvent(QPaintEvent* event){
     QPainter painter(this);
 
     //游戏注册页背景
-    painter.setPen(Qt::black);
-    painter.setBrush(QColorConstants::Svg::blanchedalmond);
-    painter.drawRect(15,15,1250,770);
+    painter.drawPixmap(0,0,1280,800,background);
 
 }
 

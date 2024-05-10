@@ -5,6 +5,8 @@
 #include <qpainter.h>
 #include "login.h"
 #include <qtimer.h>
+#include <QtMultimedia/QMediaPlayer>
+#include <QtMultimedia/QtMultimedia>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,15 +19,10 @@ class geometryGame : public QMainWindow
     Q_OBJECT
 
 public:
+    QPixmap backgroung;
     geometryGame(QWidget *parent = nullptr);
     ~geometryGame();
     void paintEvent(QPaintEvent* event);
-   // void Initline();
-
-
-//public slots:
-    //void line_update();
-
 
 private slots:
     void on_pushButton_1_clicked();
@@ -35,7 +32,6 @@ private slots:
 private:
     Ui::geometryGame *ui;
     login *loginPage = new login;
-    //QRect r1;
-    //QTimer* timer;
+
 };
 #endif // GEOMETRYGAME_H

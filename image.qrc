@@ -9,5 +9,26 @@
         <file>img/starKing-moveright.png</file>
         <file>img/attack.png</file>
         <file>img/attack2.png</file>
+        <file>img/background.png</file>
+        <file>img/button.png</file>
+        <file>img/background2.png</file>
+        <file>img/lineEdit.png</file>
+        <file>img/frame.png</file>
+        <file>img/animation.png</file>
+        <file>img/animation2.png</file>
+        <file>img/button_right.png</file>
+        <file>img/animation3.png</file>
+        <file>img/text.png</file>
+        <file>img/game_background.png</file>
+        <file>img/Stars_01.png</file>
+        <file>img/stars_02.png</file>
+        <file>img/stars_03.png</file>
+        <file>img/pause.png</file>
+        <file>img/play.png</file>
+        <file>img/stars_00.png</file>
+        <file>img/Options.png</file>
+        <file>img/help.png</file>
+        <file>img/close.png</file>
+        <file>audio/open.wav</file>
     </qresource>
 </RCC>

@@ -1,5 +1,6 @@
 #include "geometrygame.h"
-
+#include <QApplication>
+#include <QtMultimedia/QMediaPlayer>
 #include <QApplication>
 
 int main(int argc, char *argv[])

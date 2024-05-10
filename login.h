@@ -5,7 +5,13 @@
 #include <qpainter.h>
 #include "signup.h"
 #include "animation_level.h"
-
+/*
+#include <QtSql/QSqlDatabase> //数据驱动
+#include <QtSql/QSqlQuery> //数据库执行语句
+#include <QMessageBox>//消息盒子
+#include <QDebug>
+#include <QtSql/QSql>
+*/
 namespace Ui {
 class login;
 }
@@ -18,6 +24,8 @@ public:
     explicit login(QWidget *parent = nullptr);
     ~login();
     void paintEvent(QPaintEvent* event);
+    QPixmap background;
+    //void sqlite_Init();
 
 
 

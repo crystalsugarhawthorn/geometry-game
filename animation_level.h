@@ -16,6 +16,7 @@ class animation_level : public QWidget
     Q_OBJECT
 
 public:
+    QPixmap background;
     explicit animation_level(QWidget *parent = nullptr);
     ~animation_level();
     void paintEvent(QPaintEvent *event);

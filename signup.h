@@ -13,6 +13,7 @@ class signup : public QWidget
     Q_OBJECT
 
 public:
+    QPixmap background;
     explicit signup(QWidget *parent = nullptr);
     ~signup();
     void paintEvent(QPaintEvent* event);
