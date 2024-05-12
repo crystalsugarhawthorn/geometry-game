@@ -1,5 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>audio/open.wav</file>
+        <file>audio/backgroungmusic.wav</file>
     </qresource>
 </RCC>

@@ -29,10 +29,9 @@ void login::on_pushButton_2_clicked()
     signupPage = new signup;
     signupPage->show();
 }
-/*
-void login::sqlite_Init()
-{
 
+void sqlite_Init()
+{
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("user.db");
     if(!db.open())
@@ -51,16 +50,15 @@ void login::sqlite_Init()
         qDebug()<<"table create success";
     }
 }
-*/
+
 void login::on_pushButton_1_clicked()
 {
     //lineEdit_1为账号框
     //lineEdit_2为密码框
-   /* sqlite_Init();
-    QString username = ui->lineEdit_1->text();
-    QString password = ui->lineEdit_2->text();
-    QString sql=QString("select * from user where username='%1' and password='%2'")
-                      .arg(username).arg(password);
+    sqlite_Init();
+    QString username = ui->lineEdit_username->text();
+    QString password = ui->lineEdit_password->text();
+    QString sql=QString("select * from user where username='%1' and password='%2'").arg(username).arg(password);
     //创建执行语句对象
     QSqlQuery query(sql);
     //判断执行结果
@@ -74,11 +72,8 @@ void login::on_pushButton_1_clicked()
         qDebug()<<"Login success";
         QMessageBox::information(this,"登录认证","登录成功");
         //登录成功后可以跳转到其他页面
-        this->close();
         animation_levelPage->show();
+        this->close();
     }
-*/
-    this->close();
-    animation_levelPage->show();
 }
 

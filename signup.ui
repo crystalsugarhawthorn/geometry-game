@@ -17,8 +17,8 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>610</y>
-     <width>141</width>
+     <y>620</y>
+     <width>140</width>
      <height>70</height>
     </rect>
    </property>
@@ -362,10 +362,10 @@ color: qlineargradient(spread:pad, x1:0.494682, y1:0.0568182, x2:0.528409, y2:0.
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>400</y>
-     <width>75</width>
-     <height>21</height>
+     <x>374</x>
+     <y>350</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -380,11 +380,11 @@ color: qlineargradient(spread:pad, x1:0.494682, y1:0.0568182, x2:0.528409, y2:0.
     <string>账号：</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_1">
+  <widget class="QLineEdit" name="lineEdit_username">
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>390</y>
+     <y>350</y>
      <width>320</width>
      <height>50</height>
     </rect>
@@ -393,26 +393,29 @@ color: qlineargradient(spread:pad, x1:0.494682, y1:0.0568182, x2:0.528409, y2:0.
     <string notr="true">border-image: url(:/img/lineEdit.png);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_passwd">
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>490</y>
+     <y>450</y>
      <width>320</width>
      <height>50</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/img/lineEdit.png);</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::PasswordEchoOnEdit</enum>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>500</y>
-     <width>75</width>
-     <height>25</height>
+     <x>334</x>
+     <y>454</y>
+     <width>171</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -424,16 +427,16 @@ color: qlineargradient(spread:pad, x1:0.494682, y1:0.0568182, x2:0.528409, y2:0.
     </font>
    </property>
    <property name="text">
-    <string>密码：</string>
+    <string>输入密码：</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>700</y>
-     <width>181</width>
-     <height>18</height>
+     <x>530</x>
+     <y>710</y>
+     <width>270</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
@@ -446,7 +449,44 @@ color: qlineargradient(spread:pad, x1:0.494682, y1:0.0568182, x2:0.528409, y2:0.
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>注册请勾选此框</string>
+    <string>注册请勾选，表示同意所有权条款</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>284</x>
+     <y>554</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文新魏</family>
+     <pointsize>24</pointsize>
+     <bold>true</bold>
+     <hintingpreference>PreferNoHinting</hintingpreference>
+    </font>
+   </property>
+   <property name="text">
+    <string>重复输入密码：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_surepasswd">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>550</y>
+     <width>320</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/img/lineEdit.png);</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::PasswordEchoOnEdit</enum>
    </property>
   </widget>
  </widget>

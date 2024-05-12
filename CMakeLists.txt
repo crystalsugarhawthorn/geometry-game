@@ -11,13 +11,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Multimedia MultimediaWidgets REQUIRED)
-# include_directories(/usr/local/opt/qt@6/include/QtMultimediaWidgets)
-# include_directories(${QT_INCLUDE_DIR})
 
-include_directories(${Qt6MultimediaWidgets_INCLUDE_DIRS})
-
-find_package(Qt6 COMPONENTS Gui Core Sql REQUIRED)
+find_package(Qt6 COMPONENTS Gui Core REQUIRED)
 find_package(Qt6 COMPONENTS Sql REQUIRED)
 find_package(Qt6 COMPONENTS Multimedia REQUIRED)
 
@@ -62,11 +57,10 @@ else()
     endif()
 endif()
 
-target_link_libraries(springHomework PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-target_link_libraries(springHomework INTERFACE Qt6::Multimedia )
-target_link_libraries(springHomework ${Widgets} ${Multimedia} ${MultimediaWidgets})
-target_link_libraries(springHomework INTERFACE Qt::Sql Qt6::Gui Qt::Core)
-target_link_libraries(springHomework INTERFACE Qt6::Sql )
+target_link_libraries(springHomework PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt::Multimedia Qt6::Gui Qt::Core Qt6::Sql)
+target_link_libraries(springHomework INTERFACE Qt6::Multimedia)
+target_link_libraries(springHomework INTERFACE Qt6::Gui Qt::Core)
+target_link_libraries(springHomework INTERFACE Qt6::Sql)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

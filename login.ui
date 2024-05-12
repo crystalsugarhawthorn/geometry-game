@@ -130,7 +130,7 @@
     <string>密码：</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_1">
+  <widget class="QLineEdit" name="lineEdit_username">
    <property name="geometry">
     <rect>
      <x>520</x>
@@ -151,7 +151,7 @@
     <string notr="true">border-image: url(:/img/lineEdit.png);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_password">
    <property name="geometry">
     <rect>
      <x>520</x>

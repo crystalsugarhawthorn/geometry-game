@@ -23,8 +23,6 @@ private slots:
 
 private:
     Ui::signup *ui;
-    char account[10][20];
-    char password[10][20];
 };
 
 #endif // SIGNUP_H

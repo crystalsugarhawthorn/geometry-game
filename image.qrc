@@ -29,6 +29,5 @@
         <file>img/Options.png</file>
         <file>img/help.png</file>
         <file>img/close.png</file>
-        <file>audio/open.wav</file>
     </qresource>
 </RCC>
