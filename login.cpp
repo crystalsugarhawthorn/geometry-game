@@ -6,7 +6,7 @@ login::login(QWidget *parent)
     , ui(new Ui::login)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(200,200,1280,800));
+    this->setGeometry(QRect(220,150,1280,800));
     setWindowTitle("GEOMETRY GAME");
     background = QPixmap(":/img/background2.png");
 }

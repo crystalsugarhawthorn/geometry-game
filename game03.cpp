@@ -6,9 +6,10 @@ game03::game03(QWidget *parent)
     , ui(new Ui::game03)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(400,250,1080,600));
-    setWindowTitle("关卡01");
+    this->setGeometry(QRect(320,250,1080,600));
+    setWindowTitle("关卡03");
     ui->groupBox->close();
+    ui->groupBox_3->close();
     ui->label_6->close();
     background = QPixmap(":/img/game_background.png");
 
@@ -110,12 +111,16 @@ void game03::paintEvent(QPaintEvent* event){
         }
     }
     //square
-    painter.setPen(Qt::black);
-    painter.setBrush(QColorConstants::Svg::black);
+    painter.setPen(QColorConstants::Svg::darkolivegreen);
+    painter.setBrush(QColorConstants::Svg::darkolivegreen);
     for(int i=0;i<SQU;i++){
         sq_[i] = sq[i].squ;
     }
-    painter.drawRects(sq_,SQU);
+    for(int i=0;i<SQU;i++){
+        painter.setRenderHint(QPainter::Antialiasing, true);
+        painter.drawPie(sq_[i],30 * 16,120 * 16);
+    }
+
 
     //角色——太阳、六芒星国王
     if(king_attack){
@@ -233,7 +238,7 @@ void game03::endgame1(){
             sq[i].timer->stop();
         }
         ui->label_4->setNum(score);
-        if(score <= 50){
+        if(score <= 150){
             ui->label_6->setStyleSheet("border-image: url(:/img/stars_00.png)");
         }
         else if(score >150 && score <= 300){
@@ -275,3 +280,21 @@ void game03::on_pushButton_11_clicked()
 {
     ui->groupBox_2->close();
 }
+
+void game03::on_pushButton_2_clicked()
+{
+    ui->groupBox_3->show();
+}
+
+
+void game03::on_pushButton_12_clicked()
+{
+    ui->groupBox_3->close();
+}
+
+
+void game03::on_pushButton_5_clicked()
+{
+    this->close();
+}
+

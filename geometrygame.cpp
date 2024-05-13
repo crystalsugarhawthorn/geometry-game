@@ -6,7 +6,7 @@ geometryGame::geometryGame(QWidget *parent)
     , ui(new Ui::geometryGame)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(200,200,1280,800));
+    this->setGeometry(QRect(220,150,1280,800));
     setWindowTitle("GEOMETRY GAME");
     backgroung = QPixmap(":/img/background2.png");
 }

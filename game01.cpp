@@ -8,9 +8,10 @@ game01::game01(QWidget *parent)
     , ui(new Ui::game01)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(400,250,1080,600));
+    this->setGeometry(QRect(320,250,1080,600));
     setWindowTitle("关卡01");
     ui->groupBox->close();
+    ui->groupBox_3->close();
     ui->label_6->close();
     background = QPixmap(":/img/game_background.png");
 
@@ -113,7 +114,7 @@ void game01::paintEvent(QPaintEvent* event){
     }
     //square
     painter.setPen(Qt::black);
-    painter.setBrush(QColorConstants::Svg::black);
+    painter.setBrush(QColorConstants::Svg::midnightblue);
     for(int i=0;i<SQU;i++){
         sq_[i] = sq[i].squ;
     }
@@ -276,5 +277,23 @@ void game01::on_pushButton_4_clicked()
 void game01::on_pushButton_11_clicked()
 {
     ui->groupBox_2->close();
+}
+
+
+void game01::on_pushButton_12_clicked()
+{
+    ui->groupBox_3->close();
+}
+
+
+void game01::on_pushButton_2_clicked()
+{
+    ui->groupBox_3->show();
+}
+
+
+void game01::on_pushButton_5_clicked()
+{
+    this->close();
 }
 

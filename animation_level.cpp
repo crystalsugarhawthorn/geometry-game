@@ -7,7 +7,7 @@ animation_level::animation_level(QWidget *parent)
     , ui(new Ui::animation_level)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(400,250,1080,600));
+    this->setGeometry(QRect(320,250,1080,600));
     setWindowTitle("GEOMETRY GAME");
     background = QPixmap(":/img/background2.png");
     timeCounter = 1;

@@ -43,6 +43,12 @@ private slots:
 
     void on_pushButton_24_clicked();
 
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui::game02 *ui;
     QTimer* timer1 ,* timer2,* timer3,* timer4,* timer5;

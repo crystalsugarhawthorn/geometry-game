@@ -6,7 +6,8 @@ mainpage::mainpage(QWidget *parent)
     , ui(new Ui::mainpage)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(400,250,1080,600));
+    this->setGeometry(QRect(320,250,1080,600));
+    ui->groupBox_3->close();
     background = QPixmap(":/img/background2.png");
 }
 
@@ -51,5 +52,17 @@ void mainpage::on_pushButton_3_clicked()
     game03page = new game03;
     game03page->show();
     game03page->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+
+void mainpage::on_pushButton_18_clicked()
+{
+    ui->groupBox_3->show();
+}
+
+
+void mainpage::on_pushButton_12_clicked()
+{
+    ui->groupBox_3->close();
 }
 

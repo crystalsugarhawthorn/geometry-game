@@ -6,9 +6,10 @@ game02::game02(QWidget *parent)
     , ui(new Ui::game02)
 {
     ui->setupUi(this);
-    this->setGeometry(QRect(400,250,1080,600));
-    setWindowTitle("关卡01");
+    this->setGeometry(QRect(320,250,1080,600));
+    setWindowTitle("关卡02");
     ui->groupBox->close();
+    ui->groupBox_3->close();
     ui->label_20->close();
     background = QPixmap(":/img/game_background.png");
 
@@ -109,12 +110,15 @@ void game02::paintEvent(QPaintEvent* event){
         }
     }
     //square
-    painter.setPen(Qt::black);
-    painter.setBrush(QColorConstants::Svg::black);
+    painter.setPen(QColorConstants::Svg::darkslategrey);
+    painter.setBrush(QColorConstants::Svg::darkslategrey);
     for(int i=0;i<SQU;i++){
         sq_[i] = sq[i].squ;
     }
-    painter.drawRects(sq_,SQU);
+    for(int i=0;i<SQU;i++){
+        painter.drawEllipse(sq_[i]);
+    }
+
 
     //角色——太阳、六芒星国王
     if(king_attack){
@@ -274,3 +278,21 @@ void game02::on_pushButton_24_clicked()
 {
     ui->groupBox_2->close();
 }
+
+void game02::on_pushButton_12_clicked()
+{
+    ui->groupBox_3->close();
+}
+
+
+void game02::on_pushButton_2_clicked()
+{
+    ui->groupBox_3->show();
+}
+
+
+void game02::on_pushButton_6_clicked()
+{
+    this->close();
+}
+
